@@ -11,3 +11,15 @@ grpc:
       address: 'localhost:50051'
       plaintext: true
       max-retry-attempts: 5
+  server:
+    health:
+      enabled: true #default: true
+
+endpoints:
+  all:
+    #port: 8085 # usa porta padrão do http-server ou assume essa outra
+    sensitive: false #por padrão, a maioria dos endpoints são protegidos por segurança
+  health:
+    enabled: true
+    sensitive: false #default = false
+    details-visible: ANONYMOUS
